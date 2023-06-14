@@ -10,7 +10,7 @@ const healthPath = '/health';
 const userPath = '/user';
 const bookPath = '/book';
 const booksPath = '/books';
-
+ 
 export const handler = async (event) => {
     console.log('Request event: ', event);
     let response;
@@ -123,7 +123,6 @@ async function deleteBook(bookId) {
     const data = await docClient.send(deleteCommand);
     return buildResponse(200, data);
 }
-
 
 
 function buildResponse(statusCode, body) {
